@@ -1,0 +1,23 @@
+---
+
+- hosts: all
+  gather_facts: True
+
+  tasks:
+    - name: Print Linux Family
+      debug: var=ansible_os_family
+  
+    - name: ping for Linux
+      ping:
+      ignore_errors: true
+      when: ansible_os_family == "RedHat"
+      
+    - name: ping for Windows
+      win_ping:
+      ignore_errors: true
+      when: ansible_os_family == "Windows"
+    
+    # - name: ping
+    #   shell: ping -c 1 -w 2 8.8.8.8
+    #   ignore_errors: true
+    

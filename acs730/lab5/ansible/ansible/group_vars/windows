@@ -1,0 +1,10 @@
+---
+ansible_user: Administrator
+ansible_password: R$zCfSsxKP)AAEod7AZHAM3ek!X7PXxW
+ansible_ssh_port: 5986
+ansible_connection: winrm
+ansible_winrm_server_cert_validation: ignore
+ansible_python_interpreter: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe
+ansible_ssh_private_key_file : /home/ec2-user/.ssh/windows
+environment : PROD
+Owner: KusalThiwanka
